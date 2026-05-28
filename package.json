@@ -1,0 +1,46 @@
+{
+  "name": "fastify-idempotency",
+  "version": "1.0.0",
+  "description": "Fastify plugin that makes unsafe requests safe to retry using Idempotency-Key headers.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "example": "tsx examples/server.ts"
+  },
+  "keywords": [
+    "fastify",
+    "fastify-plugin",
+    "idempotency",
+    "idempotency-key",
+    "retry",
+    "middleware"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "fastify": "^5.0.0"
+  },
+  "dependencies": {
+    "fastify-plugin": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "fastify": "^5.2.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
